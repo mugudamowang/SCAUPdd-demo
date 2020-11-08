@@ -1,8 +1,36 @@
 # scaupdd-demo
 
-> A Vue.js project
+## 项目简介
 
-## Build Setup
+> 本项目是[SCAU-PDD](#)的前端展示
+
+​	采用Vue.js + Vant-ui搭建构建的移动端商城秒杀项目, 主要用于实践个人的技术, **提升自我**
+
+## 功能清单
+
+- 首页
+  - [ ] 商品检索🔍
+  - [ ] 商品切换条🧭
+  - [ ] 拼单字幕广播📡
+  - [ ] 折扣活动模块⚙
+- 直播
+  - [ ] 关注动态☁
+  - [ ] 房间列表🏠
+- 分类
+  - [ ] 品类导航卡🚦
+  - [ ] 商品检索🔍(repeat)
+- 个人中心
+  - [ ] 用户账号😀
+  - [ ] 订单模块🚗
+  - [ ] 商品模块🎁
+  - [ ] 客服模块👔
+- 聊天
+  - [ ] 聊天室💬
+  - [ ] 推荐模块🎈
+
+
+
+## 安装步骤
 
 ``` bash
 # install dependencies
@@ -17,5 +45,3 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
