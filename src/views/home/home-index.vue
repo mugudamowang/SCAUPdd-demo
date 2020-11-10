@@ -1,7 +1,7 @@
 <template>
     <div>
         <header class="headerNav">
-            <img class="logo" src="../assets/logo.png" />
+            <img class="logo" src="../../assets/logo.png" />
             <div class="centerFix">
                 <van-search
                     style="height: 100%"
@@ -26,6 +26,13 @@
                     </van-swipe-item>
                 </van-swipe>
             </div>
+            <div class="advertise" >
+                <van-grid :column-num="3" icon-size="10px">
+                    <van-grid-item icon="smile" text="限时秒杀" />
+                    <van-grid-item icon="service" text="限量抢购" />
+                    <van-grid-item icon="friends" text="砍价聚惠" />
+                </van-grid>
+            </div>
             <p class="desText">爆款推荐</p>
             <div
                 v-for="(info, index) in productList"
@@ -43,35 +50,28 @@
                 />
             </div>
         </main>
-        <footer class="footer">
-            <van-tabbar v-model="active">
-                <van-tabbar-item icon="home-o">首页</van-tabbar-item>
-                <van-tabbar-item icon="video-o">直播</van-tabbar-item>
-                <van-tabbar-item icon="more-o">分类</van-tabbar-item>
-                <van-tabbar-item badge="5" icon="comment-o"
-                    >聊天</van-tabbar-item
-                >
-                <van-tabbar-item dot icon="manager-o">我的</van-tabbar-item>
-            </van-tabbar>
-        </footer>
+
+        <!--底部导航 -->
+        <footer_tabBar :active="0"></footer_tabBar>
     </div>
 </template>
 
 <script>
+import footer_tabBar from "../../components/footer-tabBar";
 export default {
-    name: "home",
+    name: "home-index",
     data() {
         return {
             value: "",
             images: [
-                require("../assets/discount.png"),
-                require("../assets/kill.png"),
-                require("../assets/free.png"),
+                require("../../assets/discount.png"),
+                require("../../assets/kill.png"),
+                require("../../assets/free.png"),
             ],
-            productList: [{}, {}, {}],
-            active: "",
+            productList: [{}, {}, {}, {}, {}, {}],
         };
     },
+    components: { footer_tabBar },
     methods: {
         goSearch() {
             console.log("点击搜索框");
@@ -82,6 +82,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.advertise{
+}
 .desText {
     font-size: 0.2rem;
     padding: 0.2rem 0 0 0.1rem;
@@ -93,7 +95,10 @@ export default {
     border-radius: 0.1rem;
 }
 .headerNav {
+    background: #FFFFFF;
+    z-index: 10;
     position: sticky;
+    top: 0;
     display: flex;
     align-self: flex-start;
 }
@@ -117,7 +122,7 @@ export default {
     text-align: center;
 }
 @media screen and (min-width: 600px) {
-    .my-swipe{
+    .my-swipe {
         height: 450px;
     }
 }
