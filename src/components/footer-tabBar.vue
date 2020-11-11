@@ -1,6 +1,6 @@
 <template>
     <footer class="footer">
-        <van-tabbar v-model="bar_active">
+        <van-tabbar active-color="green" v-model="bar_active">
             <van-tabbar-item to="/" icon="home-o">首页</van-tabbar-item>
             <van-tabbar-item to="/live" icon="video-o">直播</van-tabbar-item>
             <van-tabbar-item to="/catalog" icon="more-o">分类</van-tabbar-item>

@@ -16,21 +16,47 @@
         <main>
             <p class="desText">聚优惠</p>
             <div class="swiper">
-                <van-swipe height="180" class="my-swipe" :autoplay="3000">
+                <van-swipe class="my-swipe" :autoplay="3000">
                     <van-swipe-item
                         class="van-swipe-item"
                         v-for="(image, index) in images"
                         :key="index"
                     >
-                        <img width="100%" v-lazy="image" />
+                        <img v-lazy="image" />
                     </van-swipe-item>
                 </van-swipe>
             </div>
-            <div class="advertise" >
+            <div class="advertise">
                 <van-grid :column-num="3" icon-size="10px">
                     <van-grid-item icon="smile" text="限时秒杀" />
                     <van-grid-item icon="service" text="限量抢购" />
                     <van-grid-item icon="friends" text="砍价聚惠" />
+                </van-grid>
+            </div>
+            <div class="hotProduct">
+                <p class="desText">热销商品</p>
+
+                <van-grid clickable :column-num="2" square>
+                    <van-grid-item>
+                        <van-image
+                            src="https://img.yzcdn.cn/vant/apple-1.jpg"
+                        />
+                    </van-grid-item>
+                    <van-grid-item>
+                        <van-image
+                            src="https://img.yzcdn.cn/vant/apple-2.jpg"
+                        />
+                    </van-grid-item>
+                    <van-grid-item>
+                        <van-image
+                            src="https://img.yzcdn.cn/vant/apple-3.jpg"
+                        />
+                    </van-grid-item>
+                    <van-grid-item>
+                        <van-image
+                            src="https://img.yzcdn.cn/vant/apple-1.jpg"
+                        />
+                    </van-grid-item>
                 </van-grid>
             </div>
             <p class="desText">爆款推荐</p>
@@ -82,20 +108,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.advertise{
-}
 .desText {
-    font-size: 0.2rem;
-    padding: 0.2rem 0 0 0.1rem;
+    font-size: 0.3rem;
+    padding: 0.1rem;
     color: grey;
-    background-color: #fafafa;
+    background-color: #FFFFFF;
 }
 .productList * {
     margin: 0 0 0.1rem 0;
     border-radius: 0.1rem;
 }
 .headerNav {
-    background: #FFFFFF;
+    background: #ffffff;
     z-index: 10;
     position: sticky;
     top: 0;
@@ -116,14 +140,17 @@ export default {
 }
 
 .my-swipe .van-swipe-item {
-    color: #000000;
-    font-size: 0.1rem;
-    line-height: 0.2rem;
-    text-align: center;
+    height: 5rem;
 }
-@media screen and (min-width: 600px) {
-    .my-swipe {
-        height: 450px;
+
+.van-swipe-item > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+@media screen and (max-width: 400px) {
+    .my-swipe .van-swipe-item {
+        height: 3.5rem;
     }
 }
 </style>

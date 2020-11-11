@@ -14,27 +14,42 @@ export default new Router({
     {
       path: '/',
       name: 'home-index',
-      component: home
+      component: home,
+      meta: {
+        title: '首页'
+      }
     },
     {
       path: '/live',
       name: 'live-index',
-      component: live
+      component: live,
+      meta: {
+        title: '直播'
+      }
     },
     {
       path: '/catalog',
       name: 'catalog-index',
-      component: catalog
+      component: catalog,
+      meta: {
+        title: '分类'
+      }
     },
     {
       path: '/talk',
       name: 'talk-index',
-      component: talk
+      component: talk,
+      meta: {
+        title: '聊天'
+      }
     },
     {
       path: '/my',
       name: 'my-index',
-      component: my
+      component: my,
+      meta: {
+        title: '我的'
+      }
     }
   ]
 })
