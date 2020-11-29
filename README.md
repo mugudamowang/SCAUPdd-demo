@@ -32,7 +32,13 @@
   - [ ] 客服\商家模块👔
   - [ ] 聊天室💬
 
-
+## 优化清单
+- skepton骨架屏
+- UI、配色
+- 图片懒加载
+- 404导航/路径错误路由
+- localstorage/sessionstorage/cookies
+- 输入搜索建议项
 
 ## 安装步骤
 

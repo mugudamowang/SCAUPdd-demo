@@ -4,6 +4,7 @@ import home from '@/views/home/home-index'
 import live from '@/views/live/live-index'
 import catalog from '@/views/catalog/catalog-index'
 import talk from '@/views/talk/talk-index'
+import search from '@/views/search/search-index'
 import my from '@/views/my/my-index'
 
 Vue.use(Router)
@@ -17,6 +18,14 @@ export default new Router({
       component: home,
       meta: {
         title: '首页'
+      }
+    },
+    {
+      path: '/search',
+      name: 'search-index',
+      component: search,
+      meta: {
+        title: '搜索'
       }
     },
     {

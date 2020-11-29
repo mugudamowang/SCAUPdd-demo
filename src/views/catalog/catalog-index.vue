@@ -1,6 +1,7 @@
 <template>
     <div>
         <header>
+            <router-link to="/search">
             <van-search
                 style="height: 100%"
                 input-align="center"
@@ -9,6 +10,7 @@
                 disabled
                 placeholder="商品搜索"
             />
+            </router-link>
         </header>
         <main>
             <van-tree-select

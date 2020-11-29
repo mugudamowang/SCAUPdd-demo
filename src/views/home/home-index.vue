@@ -3,6 +3,7 @@
         <header class="headerNav">
             <img class="logo" src="../../assets/logo.png" />
             <div class="centerFix">
+                <router-link to="/search">
                 <van-search
                     style="height: 100%"
                     input-align="center"
@@ -11,6 +12,7 @@
                     disabled
                     placeholder="商品搜索"
                 />
+                </router-link>
             </div>
         </header>
         <main>
@@ -135,10 +137,6 @@ export default {
 .centerFix {
     flex-grow: 1;
 }
-.swiper {
-    margin: 0.1rem;
-}
-
 .my-swipe .van-swipe-item {
     height: 5rem;
 }
