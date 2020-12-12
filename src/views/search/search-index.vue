@@ -17,37 +17,45 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
     name: "search",
     data() {
         return {
             value: "",
+            productlist: [],
         };
     },
     methods: {
         onSearch() {
-            alert(this.value);
+            axios
+                .get("http://localhost:3000/api1", {
+                    params: {
+                        pattern: this.value,    //传参
+                    },
+                })
+                .then((res) => {
+                    alert(res.data.key1);
+                });
         },
-        onBackward(){
+        onBackward() {
             //编程式导航
             this.$router.go(-1);
-        }
+        },
     },
 };
 </script>
 
 <style scoped>
-
-.search-bar{
+.search-bar {
     display: flex;
     align-items: center;
 }
-.search-bar > #goback{
+.search-bar > #goback {
     font-size: 0.5rem;
 }
-.search-bar .van-search{  
+.search-bar .van-search {
     flex: 2;
     padding-left: 0;
 }
-
 </style>
