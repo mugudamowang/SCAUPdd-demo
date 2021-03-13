@@ -1,7 +1,7 @@
 <template>
     <div class="body">
         <header style="position: sticky; top: 0px">
-            <van-icon  
+            <van-icon
                 v-show="storeList.length > 5"
                 class="moreStore"
                 name="arrow"
@@ -9,7 +9,7 @@
             <van-icon
                 v-show="storeList.length > 5"
                 class="moreStore"
-                style="left:0"
+                style="left: 0"
                 name="arrow-left"
             />
             <p style="font-size: 0.3rem; padding: 0.3rem">关注的直播</p>
@@ -39,9 +39,11 @@
                 >
                     <van-grid :border="false" :column-num="2">
                         <van-grid-item v-for="subindex in 8" :key="subindex">
-                            <van-image
-                                src="https://img.yzcdn.cn/vant/apple-1.jpg"
-                            />{{ index }}.{{ subindex }}
+                            <router-link to="/live-detail">
+                                <van-image
+                                    src="https://img.yzcdn.cn/vant/apple-1.jpg"
+                                />{{ index }}.{{ subindex }}
+                            </router-link>
                         </van-grid-item>
                     </van-grid>
                 </van-tab>

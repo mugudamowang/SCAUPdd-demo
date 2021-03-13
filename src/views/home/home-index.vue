@@ -4,14 +4,14 @@
             <img class="logo" src="../../assets/logo.png" />
             <div class="centerFix">
                 <router-link to="/search">
-                <van-search
-                    style="height: 100%"
-                    input-align="center"
-                    v-model="value"
-                    @click="goSearch"
-                    disabled
-                    placeholder="商品搜索"
-                />
+                    <van-search
+                        style="height: 100%"
+                        input-align="center"
+                        v-model="value"
+                        @click="goSearch"
+                        disabled
+                        placeholder="商品搜索"
+                    />
                 </router-link>
             </div>
         </header>
@@ -67,15 +67,17 @@
                 :key="index"
                 class="productList"
             >
-                <van-card
-                    num="2"
-                    tag="标签"
-                    price="2.00"
-                    desc="描述信息"
-                    title="商品标题"
-                    thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
-                    origin-price="10.00"
-                />
+                <router-link to="/product-detail">
+                    <van-card
+                        num="2"
+                        tag="标签"
+                        price="2.00"
+                        desc="描述信息"
+                        title="商品标题"
+                        thumb="https://img.yzcdn.cn/vant/ipad.jpeg"
+                        origin-price="10.00"
+                    />
+                </router-link>
             </div>
         </main>
 
@@ -114,7 +116,7 @@ export default {
     font-size: 0.3rem;
     padding: 0.1rem;
     color: grey;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 .productList * {
     margin: 0 0 0.1rem 0;

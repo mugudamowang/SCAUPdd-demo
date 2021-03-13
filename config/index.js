@@ -13,7 +13,7 @@ module.exports = {
     proxyTable: {},
 
     // Various Dev Server settings
-    // on BUKUNOFMUGU: 172.16.68.50 ; on deepin: 172.16.226.251(WLAN) ; 172.16.82.62
+    // on BUKUNOFMUGU: 172.16.68.50 || 172.18.236.76(WLAN) ; on deepin: 172.16.226.251(WLAN) ; 172.16.82.62
     host: 'localhost', // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,

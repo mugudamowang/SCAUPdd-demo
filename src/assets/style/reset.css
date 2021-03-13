@@ -139,3 +139,9 @@ table {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.van-nav-bar
+.van-icon,
+.van-nav-bar__text {
+  color: #07C160;
+}

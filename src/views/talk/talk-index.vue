@@ -14,15 +14,17 @@
                     @load="onLoad"
                 >
                     <div v-for="item in storename" :key="item" :title="item">
-                        <van-image
-                        id="avatar"
-                            round
-                            fit="cover"
-                            width="0.8rem"
-                            height="0.8rem"
-                            src="https://img.yzcdn.cn/vant/cat.jpeg"
-                        />
-                        <label for="avatar">{{item}}</label>
+                        <router-link to="/talk-detail">
+                            <van-image
+                                id="avatar"
+                                round
+                                fit="cover"
+                                width="0.8rem"
+                                height="0.8rem"
+                                src="https://img.yzcdn.cn/vant/cat.jpeg"
+                            />
+                            <label for="avatar">{{ item }}</label>
+                        </router-link>
                     </div>
                 </van-list>
             </van-pull-refresh>
@@ -39,7 +41,7 @@ export default {
     name: "talk-index",
     data() {
         return {
-            storename:[1,2,3,4,5,6,7,8,9,10],
+            storename: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             list: [],
             loading: false,
             finished: false,

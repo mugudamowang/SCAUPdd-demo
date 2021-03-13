@@ -57,8 +57,11 @@ export default {
     name: "my-index",
     data() {
         return {
-            username: "mugu",
+            username: "",
         };
+    },
+    mounted(){
+            this.username = localStorage.getItem("userOnlogin")
     },
     components: { footer_tabBar },
 };
